@@ -1,9 +1,7 @@
 import 'dart:io';
-import 'dart:ui' as prefix0;
-
-import 'main.dart';
-
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'calendar.dart';
 
 class MyProgramsPage extends StatefulWidget {
   MyProgramsPage({Key key}) : super(key: key);
@@ -38,9 +36,9 @@ class Programs extends State<StatefulWidget> {
         child: Scaffold(
           key: _formKey,
           body: PageView(
+            //physics: NeverScrollableScrollPhysics(),
             controller: _pageController,
             children: [
-
               //Page 1
               Scaffold(
                   body: ListView(children: [
@@ -112,7 +110,7 @@ class Programs extends State<StatefulWidget> {
               ])),
 
               //Page 2
-              Text("test"),
+              MyCalendarPage(),
             ],
           ),
         ));
